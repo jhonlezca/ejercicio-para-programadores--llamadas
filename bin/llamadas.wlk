@@ -3,6 +3,8 @@ class Llamada{
 	
 	const property dia
 	const property hora
+	
+	// se toma la duracion en segundos
 	const property duracionLlamada 
 	
 	method llamadaEnMinutos(){
@@ -31,6 +33,14 @@ class Local inherits Llamada{
 	
 }
 
-class Nacional inherits Llamada{}
-class Internacional inherits Llamada{}
+class Nacional inherits Llamada{
+	
+	// aqui el costo varia segun la localidad de donde se realice la llamada
+	override method costo(){}
+}
+class Internacional inherits Llamada{
+	
+	// aqui el costo varia segun el pais de donde se realice la llamada
+	override method costo(){}
+}
 
